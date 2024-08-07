@@ -21,7 +21,7 @@ const App = () => {
           element={isAuthenticated() ? <TrackingTable /> : <Navigate to="/login" />}
         />
          <Route path="/api/save-client-data" element={<ClientDataForm />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/api/login" element={<LoginPage />} />
       </Routes>
     </Router>
   );
