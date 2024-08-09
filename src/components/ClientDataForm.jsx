@@ -20,7 +20,7 @@ const ClientDataForm = () => {
     };
 
     try {
-      const response = await fetch('http://oceanadsdatasend-env.eba-pa3h3tzc.ap-south-1.elasticbeanstalk.com/api/save-client-data', {
+      const response = await fetch('https://www.tracktraffics.com/api/save-client-data', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const TrackingTable = () => {
     const fetchData = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch('http://oceanadsnew-env.eba-gdaqnpdy.ap-south-1.elasticbeanstalk.com/track', {
+        const response = await fetch('https://www.adclickboost.com/track', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();
