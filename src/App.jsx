@@ -9,10 +9,8 @@ import ClientDataForm from './components/ClientDataForm';
 const isAuthenticated = () => {
   const token = localStorage.getItem('token');
   const isAdmin = localStorage.getItem('isAdmin') === 'true';
-  console.log("isAuthenticated" ,token,isAdmin)
   return token && isAdmin;
 };
-{console.log("isAuthenticated() funtion",isAuthenticated())}
 
 const App = () => {
   return (
