@@ -9,9 +9,10 @@ import ClientDataForm from './components/ClientDataForm';
 const isAuthenticated = () => {
   const token = localStorage.getItem('token');
   const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  console.log("isAuthenticated" ,token,isAdmin)
   return token && isAdmin;
 };
-
+{console.log("isAuthenticated() funtion",isAuthenticated())}
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route
           path="/track"
-          element={isAuthenticated() ? <TrackingTable /> : <Navigate to="/api/login" />}
+          element={isAuthenticated() ? <TrackingTable /> : <Navigate to="/" />}
         />
          <Route path="/api/save-client-data" element={<ClientDataForm />} />
         <Route path="/api/login" element={<LoginPage />} />
