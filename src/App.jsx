@@ -7,8 +7,11 @@ import Navbar from './components/Navbar';
 import ClientDataForm from './components/ClientDataForm';
 
 const isAuthenticated = () => {
-  return localStorage.getItem('isAdmin') === 'true';
+  const token = localStorage.getItem('token');
+  const isAdmin = localStorage.getItem('isAdmin') === 'true';
+  return token && isAdmin;
 };
+
 
 const App = () => {
   return (
@@ -18,7 +21,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route
           path="/track"
-          element={isAuthenticated() ? <TrackingTable /> : <Navigate to="/login" />}
+          element={isAuthenticated() ? <TrackingTable /> : <Navigate to="/api/login" />}
         />
          <Route path="/api/save-client-data" element={<ClientDataForm />} />
         <Route path="/api/login" element={<LoginPage />} />

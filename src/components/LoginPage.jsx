@@ -18,6 +18,7 @@ const LoginPage = () => {
       const data = await response.json();
       if (response.ok) {
         localStorage.setItem('token', data.token);
+        localStorage.setItem('isAdmin', data.isAdmin ? 'true' : 'false');
         navigate('/track');
       } else {
         alert('Invalid credentials');
