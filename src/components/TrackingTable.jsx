@@ -6,7 +6,7 @@ import Pagination from './Pagination';
 const TrackingTable = () => {
   const [trackedData, setTrackedData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(5);
+  const [itemsPerPage] = useState(10);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -54,7 +54,7 @@ const TrackingTable = () => {
               <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.referrer}</td>
               <td>{data.utm_source}</td>
               <td>{data.utm_medium}</td>
-              <td>{data.utm_campaign}</td>
+              <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.utm_campaign}</td>
               <td>{data.device_type}</td>
               <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.user_agent}</td>
               <td>{new Date(data.timestamp).toLocaleString()}</td>
