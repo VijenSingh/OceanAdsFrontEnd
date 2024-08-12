@@ -2,13 +2,12 @@ import React, {  useState }  from 'react';
 import './Pagination.css';
 
 
-const Pagination = ({ itemsPerPage, totalItems, paginate }) => {
+const Pagination = ({ itemsPerPage, totalItems, paginate, }) => {
   
   const [currentPage, setCurrentPage] = useState(1);
 
-  const indexOfLastTrade = currentPage * itemsPerPage;
-  const indexOfFirstTrade = indexOfLastTrade - itemsPerPage;
-  const currentTrades = tradesWithCumulativePL.slice(indexOfFirstTrade, indexOfLastTrade);
+  
+ 
 
 const prevPage = () => {
   setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
