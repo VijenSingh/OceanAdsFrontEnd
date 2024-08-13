@@ -44,7 +44,7 @@ const TrackingTable = () => {
             <th>UTM Campaign</th>
             <th>Device Type</th>
             <th>User Agent</th>
-            <th>Timestamp</th>
+            <th>User ID</th>
           </tr>
         </thead>
         <tbody>
@@ -52,12 +52,13 @@ const TrackingTable = () => {
             <tr key={data._id}>
               <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.url}</td>
               <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.referrer}</td>
-              <td>{data.utm_source}</td>
-              <td>{data.utm_medium}</td>
+              <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.utm_source}</td>
+              <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.utm_medium}</td>
               <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.utm_campaign}</td>
               <td>{data.device_type}</td>
               <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.user_agent}</td>
-              <td>{new Date(data.timestamp).toLocaleString()}</td>
+              <td style={{ maxWidth: '200px', overflowX: 'auto' }}>{data.user_id}</td>
+              
             </tr>
           ))}
         </tbody>
