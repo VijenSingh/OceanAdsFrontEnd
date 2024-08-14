@@ -19,7 +19,7 @@ const LoginPage = () => {
       if (response.ok) {
         localStorage.setItem('token', data.token);
         localStorage.setItem('isAdmin', data.isAdmin ? 'true' : 'false');
-        navigate('/alltrackdata');
+        navigate('/api/alltrackdata');
       } else {
         alert('Invalid credentials');
       }
