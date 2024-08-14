@@ -19,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route
-          path="/track"
+          path="/alltrackdata"
           element={isAuthenticated() ? <TrackingTable /> : <Navigate to="/" />}
         />
          <Route path="/api/save-client-data" element={<ClientDataForm />} />
