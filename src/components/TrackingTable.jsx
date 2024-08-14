@@ -12,7 +12,7 @@ const TrackingTable = () => {
     const fetchData = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await fetch('https://www.adclickboost.com/track', {
+        const response = await fetch('https://www.adclickboost.com/alltrackdata', {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await response.json();
